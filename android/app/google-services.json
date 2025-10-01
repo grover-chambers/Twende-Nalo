@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "248749012948",
+    "project_id": "twende-nalo",
+    "storage_bucket": "twende-nalo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248749012948:android:74d137d0e509586a5a0841",
+        "android_client_info": {
+          "package_name": "com.squareroot.twendenalo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9bGVo2anM_IlLt9dIcw2XG291KD7dxcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

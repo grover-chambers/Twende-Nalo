@@ -1,0 +1,12 @@
+flowchart TD
+    A[User opens app] --> B{Has account?}
+    B -- yes --> C[Login: phone otp or email]
+    B -- no --> D[Signup: phone+email or email]
+    D --> E[Create user in Firebase Auth]
+    E --> F["Create user doc in users/{uid} with role"]
+    C --> G[Auth success]
+    F --> G
+    G --> H[If role == seller -> open seller onboarding - business info]
+    G --> I[If role == rider -> request permissions - location & start tracking]
+    G --> J[If role == customer -> open main app]
+    H --> K[Save business info in Firestore]

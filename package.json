@@ -1,0 +1,19 @@
+{
+  "name": "twende_nalo",
+  "version": "1.0.0",
+  "description": "TwendeNalo is a mobile application designed to seamlessly connect **shoppers**, **shop owners**, and **delivery riders** within Nairobi. The app aims to simplify the shopping experience by providing a platform where users can browse products, manage orders, and coordinate deliveries efficiently.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^11.10.0"
+  }
+}

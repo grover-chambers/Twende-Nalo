@@ -1,0 +1,22 @@
+flowchart TD
+A[Buyer places order] --> B[Create tentative order doc status: pending_payment]
+B --> C[App calls backend to start M-Pesa STK Push]
+C --> D[Safaricom STK Push sent to buyer phone]
+D --> E{Payment confirmed?}
+E -- yes --> F[Callback to server -> verify -> update transactions & set order status: paid]
+F --> G[Cloud Function assigns rider or notifies seller to prepare]
+E -- no --> H[Mark order as payment_failed -> notify buyer]
+G --> I[Sellers package item -> mark ready_for_pickup]
+I --> J[Assign rider flow]
+J --> K[Rider picks up item -> mark picked_up]
+K --> L[Rider delivers item -> mark delivered]
+L --> M[Buyer confirms delivery -> mark completed]
+M --> N[Buyer rates order & rider -> update profiles]
+N --> O[End of checkout and payment flow]
+H --> P[If no payment in X mins -> auto cancel order & notify buyer]
+P --> Q[Refund if paid -> update order.status=cancelled]
+Q --> R[Notify seller to restock item]
+R --> S[Log incident for review]
+S --> T[Admin reviews & takes action on buyer if needed]
+T --> U[End of checkout and payment flow]
+

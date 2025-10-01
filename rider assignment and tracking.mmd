@@ -1,0 +1,19 @@
+flowchart TD
+A[Order ready_for_pickup] --> B[Query riders where status==available & within radius]
+B --> C{Found rider?}
+C -- yes --> D[Send push with accept button]
+D --> E{Rider accepts?}
+E -- yes --> F[Update order_rider_assignment]
+E -- no --> G[Try next nearest rider or escalate to manual dispatch]
+F --> H[Rider navigates -> updates location -> buyer sees live map]
+H --> I[On delivery complete -> rider sets status delivered -> order.status=delivered]
+I --> J[Buyer rates rider -> update rider profile]
+C -- no --> K[Notify seller: no riders available, manual dispatch needed]
+K --> L[Seller contacts customer to arrange own delivery or pickup]
+L --> M[Update order.status=awaiting_customer_action]
+M --> N[If no action in X mins -> auto cancel order & notify customer]
+N --> O[Refund if paid -> update order.status=cancelled]
+O --> P[Notify seller to restock item]
+P --> Q[Log incident for review]
+Q --> R[Admin reviews & takes action on rider if needed]
+R --> S[End of rider assignment flow]
