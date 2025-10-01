@@ -17,13 +17,17 @@ A comprehensive Flutter delivery application connecting customers, shop owners, 
 - **Rider**: Accept delivery tasks, track routes, manage earnings
 
 ### 🛍️ Core Features
-- **Real-time Order Tracking** with live location updates
-- **Secure Payment Processing** with M-Pesa integration
 - **Push Notifications** for order status updates
-- **In-app Chat Support** between all user types
 - **Rating & Review System** for shops and riders
-- **Promotional System** with referral codes
 - **Multi-language Support** (English & Swahili)
+- 🔐 **Authentication**: Phone OTP + Email/Password (Firebase Auth)  
+- 🛍️ **Product Management**: Sellers can upload, edit, and delete listings  
+- 💬 **In-App Chat**: Buyers ↔ Sellers messaging powered by Firestore + FCM  
+- 💸 **Payments**: M-Pesa (Lipa na M-Pesa Online STK Push) with secure callbacks  
+- 🚴 **Rider Tracking**: Real-time delivery updates on map (Google Maps API)  
+- 🎁 **Referrals System**: Users earn credits via invite codes  
+- 🛡️ **Security**: Firestore rules, App Check, and server-side validation  
+- 📊 **Admin Dashboard** (future roadmap) for dispute handling & analytics 
 
 ### 🏪 Shop Management
 - Product catalog management
@@ -244,14 +248,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Team
 
-- **Lead Developer**: [Your Name]
-- **UI/UX Designer**: [Designer Name]
-- **Backend Developer**: [Backend Name]
-- **QA Engineer**: [QA Name]
+- **Lead Developer**: Grover Chambers
+- **UI/UX Designer**: Grover chambers
+- **Backend Developer**: Grover Chambers
+- **QA Engineer**: Brayan Odira
 
 ## 📞 Support
 
-For support, email support@twendenalo.com or join our Slack channel.
+For support, email squarer00t@tutanota.com or join our Slack channel.
 
 ## 🙏 Acknowledgments
 
@@ -261,4 +265,4 @@ For support, email support@twendenalo.com or join our Slack channel.
 
 ---
 
-**Made with ❤️ by the Twende Nalo Team**
+**Made with ❤️ by SquareRoot INC.**
